@@ -1,29 +1,77 @@
-# Virtual Assistant for Desktop
+# Desktop Virtual Assistant
 
-## Features : 
+A voice-controlled desktop assistant built with Python. It listens for spoken commands, responds with speech, and can open Google, tell the current time or day, and identify itself as Thor.
 
-1 Voice commands: Listens through the microphone and converts speech to text using Google Speech Recognition (English–India).
+## Features
 
-2 Spoken responses: Replies using text-to-speech.
+- Voice input through a microphone using `sounddevice`.
+- Speech recognition in Indian English using Google's speech recognition service.
+- Spoken responses using `pyttsx3`.
+- Opens Google in your default web browser.
+- Announces the current time and day of the week.
+- Greets the user and responds to questions about its name.
+- Continues listening until you say “bye”.
 
-#### 3 Open websites: Opens Google in the default browser.
+## Requirements
 
-#### 4 Tell the time and day: Announces the current time or weekday.
+- Windows
+- Python 3.10 or newer
+- A working microphone
+- Internet access for speech recognition
 
-5 Assistant introduction and name: Greets the user and identifies itself as thor.
+## Setup and run
 
-6 Continuous interaction: Keeps listening for commands until you say “bye”.
+1. Install Python and make sure the Python launcher (`py`) is available in PowerShell.
+2. Clone the repository and move into its folder:
 
+   ```powershell
+   git clone https://github.com/Lightgeet/evo.git
+   cd evo
+   ```
 
+3. Create and activate a virtual environment:
+
+   ```powershell
+   py -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+   If PowerShell does not allow activating scripts, you can skip activation and use the virtual environment's Python executable in the next step.
+
+4. Install the dependencies:
+
+   ```powershell
+   python -m pip install --upgrade pip
+   python -m pip install -r requirements.txt
+   ```
+
+   If you skipped activation, run:
+
+   ```powershell
+   .\.venv\Scripts\python.exe -m pip install --upgrade pip
+   .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+   ```
+
+5. Start the assistant:
+
+   ```powershell
+   python main.py
+   ```
+
+   If you skipped activation, run:
+
+   ```powershell
+   .\.venv\Scripts\python.exe main.py
+   ```
+
+When the assistant says “Listening”, speak a command. Allow microphone access for your terminal or Python in Windows **Settings > Privacy & security > Microphone** if prompted.
 
 ## Commands to try
 
-1 “Open Google”
+- “Open Google”
+- “Which day it is?”
+- “Tell me the time”
+- “Tell me your name”
+- “Bye” to exit
 
-2 “Which day it is?”
-
-3 “Tell me the time”
-
-4 “Tell me your name”
-
-5 “Bye” — exits the assistant.
+Speech recognition uses Google's online service, so an internet connection is required. If no speech is recognized, check your microphone and Windows microphone permissions, then try speaking again.
