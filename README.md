@@ -1,14 +1,14 @@
-## Virtual Assistant for Desktop
+# Virtual Assistant for Desktop
 
-Features : 
+## Features : 
 
 Voice commands: Listens through the microphone and converts speech to text using Google Speech Recognition (English–India).
 
 Spoken responses: Replies using text-to-speech.
 
-# Open websites: Opens Google in the default browser.
+#### Open websites: Opens Google in the default browser.
 
-# Tell the time and day: Announces the current time or weekday.
+#### Tell the time and day: Announces the current time or weekday.
 
 Assistant introduction and name: Greets the user and identifies itself as thor.
 
