@@ -106,10 +106,8 @@ def tellTime():
     minute = time[14:16]
     speak("The time is mam " + hour + " Hours and " + minute + " Minutes")
 
-
 def Hello():
     speak("hello mam I am your desktop assistant. Tell me how may I help you")
-
 
 def Take_query():
     Hello()
@@ -119,10 +117,6 @@ def Take_query():
         if query == "None":
             continue
 
-        if "open geeksforgeeks" in query:
-            speak("Opening GeeksforGeeks")
-            webbrowser.open("https://www.geeksforgeeks.org")
-            continue
 
         elif "open google" in query:
             speak("Opening Google")
@@ -140,13 +134,6 @@ def Take_query():
         elif "bye" in query:
             speak("Bye. Check Out GFG for more exciting things")
             exit()
-
-        elif "wikipedia" in query:
-            speak("Checking the wikipedia")
-            query = query.replace("wikipedia", "")
-            result = wikipedia.summary(query.strip(), sentences=4)
-            speak("According to wikipedia")
-            speak(result)
 
         elif "tell me your name" in query:
             speak("I am thor. Your desktop Assistant")
